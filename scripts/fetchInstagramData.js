@@ -9,9 +9,9 @@ async function fetchInstagramData(username) {
     const input = {
         "directUrls": [`https://www.instagram.com/${username}/`],
         "resultsLimit": 5,
-        'timeoutSecs': 50,
-        "searchLimit": 1,
-        "addParentData": false
+        // 'timeoutSecs': 50,
+        // "searchLimit": 1,
+        // "addParentData": false
     };
 
     const run = await client.actor("apify/instagram-scraper").call(input);
