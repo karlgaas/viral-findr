@@ -15,7 +15,7 @@ class ApifyController extends Controller
      */
     public function index()
     {
-        return view('instagram');
+        return view('research');
     }
 
     public function search(Request $request)
