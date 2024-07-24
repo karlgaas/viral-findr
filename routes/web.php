@@ -15,7 +15,7 @@ Route::get('/run-npm-install', function () {
     // Run npm install command
     $output = [];
     $returnVar = 0;
-    exec('cd C:\laragon\www\viral-findr && npm install 2>&1', $output, $returnVar);
+    exec('cd /home/devbox3/viraltest.developmentbox3.ca && npm install 2>&1', $output, $returnVar);
 
     // Return the output and status
     return response()->json([
