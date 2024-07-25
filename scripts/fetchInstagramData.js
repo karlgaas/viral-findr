@@ -8,7 +8,8 @@ async function fetchInstagramData(username) {
     const client = new ApifyClient({ token: 'apify_api_5Bz3X77frYBWORCfDD1Xj2ghw8WpGW2tdhgs' });
     const input = {
         "directUrls": [`https://www.instagram.com/${username}/`],
-        "resultsLimit": 40,
+        "resultsLimit": 1,
+        "type": ['Video'],
         // 'timeoutSecs': 50,
         // "searchLimit": 1,
         // "addParentData": false

@@ -4,7 +4,7 @@
   @if (isset($data) && !empty($data))
     <div class="w-full mb-4 bg-success border-solid border text-white rounded p-3 text-sm">
       <p>Due to high number of signups. We are limiting number of posts displayed in free searches to 40 most recent
-        posts.
+        posts (Video) or below.
         If you need results to have more than 40 recent posts, please subscribe to a paid plan
       </p>
     </div>
@@ -18,7 +18,7 @@
             required="required" placeholder="@username" aria-label="Username" name="username"
             class="text-sm appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2
   leading-tight focus:outline-none">
-          <button class="flex-shrink-0 bg-purple-800 hover:bg-purple-700 text-sm text-white py-2 px-3 rounded">
+          <button class="flex-shrink-0 bg-primary text-sm text-white py-2 px-3 rounded">
             Search
           </button>
         </div>
@@ -51,7 +51,7 @@
                 <div class="py-2"><a href=" {{ isset($item['url']) ? $item['url'] : '' }}" target="_blank"
                     class="text-blue-500 underline text-xs">View on Instagram</a> &nbsp; <a href="#"
                     class="text-blue-500 text-xs mr-2"><i class="fa fa-clipboard"></i></a> <a
-                    href="{{ isset($item['videoUrl']) ? $item['videoViewCount'] : '' }}" target="_blank"
+                    href="{{ isset($item['videoUrl']) ? $item['videoUrl'] : '' }}" target="_blank"
                     class="text-blue-500 underline text-xs mr-2">Download</a></div>
               </div>
             </div>
