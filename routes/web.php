@@ -1,25 +1,15 @@
 <?php
 
+use App\Http\Controllers\InstagramV2Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ApifyController;
-use Illuminate\Support\Facades\Artisan;
 
-// Route to display the search form
+// Route to display the search formdwadwad
 Route::get('/', [ApifyController::class, 'index']);
 
 // Route to handle the form submission and search
 Route::post('/search', [ApifyController::class, 'search'])->name('search');
+Route::get('/instagram/{username}', [InstagramV2Controller::class, 'fetchData']);
+// Route::get('/instagram-data/{username}', [InstagramV2Controller::class, 'fetchInstagramDataFromNode']);
+Route::post('/instagram-data', [InstagramV2Controller::class, 'fetchInstagramDataFromNode'])->name('instagram-data');
 
-
-Route::get('/run-npm-install', function () {
-    // Run npm install command
-    $output = [];
-    $returnVar = 0;
-    exec('cd /home/devbox3/viraltest.developmentbox3.ca && npm install 2>&1', $output, $returnVar);
-
-    // Return the output and status
-    return response()->json([
-        'output' => $output,
-        'status' => $returnVar === 0 ? 'success' : 'error'
-    ]);
-});

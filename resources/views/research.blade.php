@@ -11,7 +11,7 @@
   @endif
   <h1 class="text-2xl mb-8">Search by username</h1>
   <div id="search-form" class="bg-white shadow-lg rounded w-full p-3">
-    <form action="{{ route('search') }}" method="POST">
+    <form action="{{ route('instagram-data') }}" method="POST">
       @csrf
       <div class="w-full mb-3">
         <div class="flex items-center border-b border-b-2 border-purple-800 py-2 mb-1"><input type="text"
