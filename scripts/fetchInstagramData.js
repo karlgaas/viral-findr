@@ -9,7 +9,6 @@ async function fetchInstagramData(username) {
     const input = {
         "directUrls": [`https://www.instagram.com/${username}/`],
         "resultsLimit": 1,
-        "type": ['Video'],
         // 'timeoutSecs': 50,
         // "searchLimit": 1,
         // "addParentData": false
