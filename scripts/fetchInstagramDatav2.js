@@ -15,7 +15,7 @@ const client = new ApifyClient({ token: 'apify_api_5Bz3X77frYBWORCfDD1Xj2ghw8WpG
 async function fetchInstagramData(username) {
     const input = {
         "directUrls": [`https://www.instagram.com/${username}/`],
-        "resultsLimit": 5,
+        "resultsLimit": 40,
     };
 
     const run = await client.actor("apify/instagram-scraper").call(input);
