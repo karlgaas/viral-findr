@@ -10,12 +10,12 @@ const port = 3000; // You can change this port number if needed
 app.use(express.json());
 
 // const client = new ApifyClient({ token: process.env.APIFY_API_TOKEN });
-const client = new ApifyClient({ token: 'apify_api_itb9SRus81ofAen1bIQ5JR9yfIgBtC1buE35' });
+const client = new ApifyClient({ token: 'apify_api_5Bz3X77frYBWORCfDD1Xj2ghw8WpGW2tdhgs' });
 
 async function fetchInstagramData(username) {
     const input = {
         "directUrls": [`https://www.instagram.com/${username}/`],
-        "resultsLimit": 5,
+        "resultsLimit": 40,
     };
 
     const run = await client.actor("apify/instagram-scraper").call(input);
@@ -34,7 +34,7 @@ app.get('/fetchInstagramData', async (req, res) => {
 
         const results = await fetchInstagramData(username);
         res.json(results);
-        
+
         // res.json(["test"]);
 
     } catch (error) {
