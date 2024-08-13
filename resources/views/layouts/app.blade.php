@@ -30,7 +30,6 @@
             overflow-y: auto;
         }
     </style>
-    @livewireStyles
 </head>
 <body>
 
