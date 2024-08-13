@@ -23,7 +23,7 @@ class InstagramV2Controller extends Controller
 
     if ($response->ok()) {
       $output = $response->json();
-
+      Log::info($output);
         return view('research', ['data' => $output]);
     } else {
       return response()->json(['error' => 'Failed to fetch data'], $response->status());
