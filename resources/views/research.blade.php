@@ -24,13 +24,6 @@
         </div>
       </div>
     </form>
-    @if (isset($data) && !empty($data))
-      @if ($data->count() == 0)
-        <div class="text-center row">
-          <p class="h3">No videos in the 40 current posts.</p>
-        </div>
-      @endif
-    @endif
   </div>
   @if (isset($data) && !empty($data))
     <div class="row">
